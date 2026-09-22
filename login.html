@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sponti Login</title>
+</head>
+
+<body>
+
+<h1>Sponti Login</h1>
+
+<input id="user" placeholder="Benutzername">
+
+<br><br>
+
+<input id="pw" type="password" placeholder="Passwort">
+
+<br><br>
+
+<button onclick="login()">Anmelden</button>
+
+<script>
+
+function login(){
+
+let user = document.getElementById("user").value;
+let pw = document.getElementById("pw").value;
+
+if(user === "admin" && pw === "Sponti2026"){
+
+localStorage.setItem("loggedIn","true");
+
+window.location.href="index.html";
+
+}else{
+
+alert("Falsches Passwort");
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
